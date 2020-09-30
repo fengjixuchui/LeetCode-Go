@@ -9,11 +9,13 @@
 
 <p align='center'>
 <a href="https://github.com/halfrost/LeetCode-Go/releases/" rel="nofollow"><img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/halfrost/LeetCode-Go/total?label=PDF%20downloads"></a>
-<img src="https://github.com/halfrost/LeetCode-Go/workflows/Deploy%20leetcode-cookbook/badge.svg?branch=master">
-<img src="https://travis-ci.org/halfrost/LeetCode-Go.svg?branch=master">
-<img src="https://goreportcard.com/badge/github.com/halfrost/LeetCode-Go">
+<img src="https://img.shields.io/badge/Total%20Word%20Count-738884-success">
+<a href="https://github.com/halfrost/LeetCode-Go/actions" rel="nofollow"><img src="https://github.com/halfrost/LeetCode-Go/workflows/Deploy%20leetcode-cookbook/badge.svg?branch=master"></a>
+<a href="https://travis-ci.org/github/halfrost/LeetCode-Go" rel="nofollow"><img src="https://travis-ci.org/halfrost/LeetCode-Go.svg?branch=master"></a>
+<a href="https://goreportcard.com/report/github.com/halfrost/LeetCode-Go" rel="nofollow"><img src="https://goreportcard.com/badge/github.com/halfrost/LeetCode-Go"></a>
 <img src="https://img.shields.io/badge/runtime%20beats-100%25-success">
-<img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/halfrost/LeetCode-Go?color=26C2F0">
+<!--<img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/halfrost/LeetCode-Go?color=26C2F0">-->
+<img alt="Support Go version" src="https://img.shields.io/badge/Go-v1.15-26C2F0">
 <img src="https://visitor-badge.laobi.icu/badge?page_id=halfrost.LeetCode-Go">
 </p>
 
@@ -2118,7 +2120,7 @@ Problems List in [there](https://books.halfrost.com/leetcode/ChapterTwo/Sliding_
 
 ![](./topic/Segment_Tree.png)
 
-- 线段数的经典数组实现写法。将合并两个节点 pushUp 逻辑抽象出来了，可以实现任意操作(常见的操作有：加法，取 max，min 等等)。第 218 题，第 303 题，第 307 题，第 699 题。
+- 线段树的经典数组实现写法。将合并两个节点 pushUp 逻辑抽象出来了，可以实现任意操作(常见的操作有：加法，取 max，min 等等)。第 218 题，第 303 题，第 307 题，第 699 题。
 - 计数线段树的经典写法。第 315 题，第 327 题，第 493 题。
 - 线段树的树的实现写法。第 715 题，第 732 题。
 - 区间懒惰更新。第 218 题，第 699 题。
