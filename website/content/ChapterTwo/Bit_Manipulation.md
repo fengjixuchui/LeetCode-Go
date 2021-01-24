@@ -55,7 +55,7 @@ X & ~X = 0
 |0260|Single Number III|[Go]({{< relref "/ChapterFour/0260.Single-Number-III.md" >}})|Medium| O(n)| O(1)|❤️|65.3%|
 |0268|Missing Number|[Go]({{< relref "/ChapterFour/0268.Missing-Number.md" >}})|Easy| O(n)| O(1)||53.5%|
 |0318|Maximum Product of Word Lengths|[Go]({{< relref "/ChapterFour/0318.Maximum-Product-of-Word-Lengths.md" >}})|Medium| O(n)| O(1)||52.1%|
-|0338|Counting Bits|[Go]({{< relref "/ChapterFour/0338.Counting-Bits.md" >}})|Medium| O(n)| O(n)||70.2%|
+|0338|Counting Bits|[Go]({{< relref "/ChapterFour/0338.Counting-Bits.md" >}})|Medium| O(n)| O(n)||70.3%|
 |0342|Power of Four|[Go]({{< relref "/ChapterFour/0342.Power-of-Four.md" >}})|Easy| O(n)| O(1)||41.6%|
 |0371|Sum of Two Integers|[Go]({{< relref "/ChapterFour/0371.Sum-of-Two-Integers.md" >}})|Medium| O(n)| O(1)||50.6%|
 |0389|Find the Difference|[Go]({{< relref "/ChapterFour/0389.Find-the-Difference.md" >}})|Easy| O(n)| O(1)||57.7%|
@@ -63,16 +63,16 @@ X & ~X = 0
 |0397|Integer Replacement|[Go]({{< relref "/ChapterFour/0397.Integer-Replacement.md" >}})|Medium| O(n)| O(1)||33.4%|
 |0401|Binary Watch|[Go]({{< relref "/ChapterFour/0401.Binary-Watch.md" >}})|Easy| O(1)| O(1)||48.3%|
 |0405|Convert a Number to Hexadecimal|[Go]({{< relref "/ChapterFour/0405.Convert-a-Number-to-Hexadecimal.md" >}})|Easy| O(n)| O(1)||44.4%|
-|0421|Maximum XOR of Two Numbers in an Array|[Go]({{< relref "/ChapterFour/0421.Maximum-XOR-of-Two-Numbers-in-an-Array.md" >}})|Medium| O(n)| O(1)|❤️|53.9%|
+|0421|Maximum XOR of Two Numbers in an Array|[Go]({{< relref "/ChapterFour/0421.Maximum-XOR-of-Two-Numbers-in-an-Array.md" >}})|Medium| O(n)| O(1)|❤️|54.0%|
 |0461|Hamming Distance|[Go]({{< relref "/ChapterFour/0461.Hamming-Distance.md" >}})|Easy| O(n)| O(1)||73.1%|
 |0476|Number Complement|[Go]({{< relref "/ChapterFour/0476.Number-Complement.md" >}})|Easy| O(n)| O(1)||65.1%|
 |0477|Total Hamming Distance|[Go]({{< relref "/ChapterFour/0477.Total-Hamming-Distance.md" >}})|Medium| O(n)| O(1)||50.6%|
-|0693|Binary Number with Alternating Bits|[Go]({{< relref "/ChapterFour/0693.Binary-Number-with-Alternating-Bits.md" >}})|Easy| O(n)| O(1)|❤️|59.7%|
+|0693|Binary Number with Alternating Bits|[Go]({{< relref "/ChapterFour/0693.Binary-Number-with-Alternating-Bits.md" >}})|Easy| O(n)| O(1)|❤️|59.8%|
 |0756|Pyramid Transition Matrix|[Go]({{< relref "/ChapterFour/0756.Pyramid-Transition-Matrix.md" >}})|Medium| O(n log n)| O(n)||55.4%|
 |0762|Prime Number of Set Bits in Binary Representation|[Go]({{< relref "/ChapterFour/0762.Prime-Number-of-Set-Bits-in-Binary-Representation.md" >}})|Easy| O(n)| O(1)||64.2%|
-|0784|Letter Case Permutation|[Go]({{< relref "/ChapterFour/0784.Letter-Case-Permutation.md" >}})|Medium| O(n)| O(1)||66.2%|
+|0784|Letter Case Permutation|[Go]({{< relref "/ChapterFour/0784.Letter-Case-Permutation.md" >}})|Medium| O(n)| O(1)||66.3%|
 |0898|Bitwise ORs of Subarrays|[Go]({{< relref "/ChapterFour/0898.Bitwise-ORs-of-Subarrays.md" >}})|Medium| O(n)| O(1)||34.0%|
-|1290|Convert Binary Number in a Linked List to Integer|[Go]({{< relref "/ChapterFour/1290.Convert-Binary-Number-in-a-Linked-List-to-Integer.md" >}})|Easy||||81.7%|
+|1290|Convert Binary Number in a Linked List to Integer|[Go]({{< relref "/ChapterFour/1290.Convert-Binary-Number-in-a-Linked-List-to-Integer.md" >}})|Easy||||81.6%|
 |------------|-------------------------------------------------------|-------| ----------------| ---------------|-------------|-------------|-------------|
 
 
