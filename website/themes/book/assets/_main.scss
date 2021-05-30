@@ -125,6 +125,14 @@ ul.pagination {
   input.toggle:checked + label + ul {
     display: block;
   }
+
+  input.toggle + label::after {
+    content: "▸";
+  }
+
+  input.toggle:checked + label::after {
+    content: "▾";
+  }
 }
 
 .book-section-flat {
@@ -206,7 +214,7 @@ ul.pagination {
 }
 
 .book-toc {
-  flex: 0 0 $toc-width;
+  // flex: 0 0 $toc-width; // 使 toc 靠右贴边
   font-size: $font-size-12;
 
   .book-toc-content {

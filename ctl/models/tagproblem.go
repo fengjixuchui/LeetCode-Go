@@ -3,9 +3,10 @@ package models
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/halfrost/LeetCode-Go/ctl/util"
 	"strconv"
 	"strings"
+
+	"github.com/halfrost/LeetCode-Go/ctl/util"
 )
 
 // Graphql define
@@ -84,8 +85,8 @@ func ConvertMdModelFromQuestions(questions []Question) []Mdrow {
 		res := Mdrow{}
 		v, _ := strconv.Atoi(question.QuestionFrontendID)
 		res.FrontendQuestionID = int32(v)
-		res.QuestionTitle = question.Title
-		res.QuestionTitleSlug = question.TitleSlug
+		res.QuestionTitle = strings.TrimSpace(question.Title)
+		res.QuestionTitleSlug = strings.TrimSpace(question.TitleSlug)
 		q, err := question.generateTagStatus()
 		if err != nil {
 			fmt.Println(err)
@@ -121,14 +122,37 @@ func GenerateTagMdRows(solutionIds []int, metaMap map[int]TagList, mdrows []Mdro
 		if util.BinarySearch(solutionIds, int(row.FrontendQuestionID)) != -1 {
 			tmp := TagList{}
 			tmp.FrontendQuestionID = row.FrontendQuestionID
-			tmp.QuestionTitle = row.QuestionTitle
-			s1 := strings.Replace(row.QuestionTitle, " ", "-", -1)
+			tmp.QuestionTitle = strings.TrimSpace(row.QuestionTitle)
+			s1 := strings.Replace(tmp.QuestionTitle, " ", "-", -1)
 			s2 := strings.Replace(s1, "'", "", -1)
 			s3 := strings.Replace(s2, "%", "", -1)
 			s4 := strings.Replace(s3, "(", "", -1)
 			s5 := strings.Replace(s4, ")", "", -1)
 			s6 := strings.Replace(s5, ",", "", -1)
 			s7 := strings.Replace(s6, "?", "", -1)
+			count := 0
+			// 去掉 --- 这种情况，这种情况是由于题目标题中包含 - ，左右有空格，左右一填充，造成了 ---，3 个 -
+			for i := 0; i < len(s7)-2; i++ {
+				if s7[i] == '-' && s7[i+1] == '-' && s7[i+2] == '-' {
+					fmt.Printf("【需要修正 --- 的标题是 %v】\n", fmt.Sprintf("%04d.%v", int(row.FrontendQuestionID), s7))
+					s7 = s7[:i+1] + s7[i+3:]
+					count++
+				}
+			}
+			if count > 0 {
+				fmt.Printf("总共修正了 %v 个标题\n", count)
+			}
+			// 去掉 -- 这种情况，这种情况是由于题目标题中包含负号 -
+			for i := 0; i < len(s7)-2; i++ {
+				if s7[i] == '-' && s7[i+1] == '-' {
+					fmt.Printf("【需要修正 -- 的标题是 %v】\n", fmt.Sprintf("%04d.%v", int(row.FrontendQuestionID), s7))
+					s7 = s7[:i+1] + s7[i+2:]
+					count++
+				}
+			}
+			if count > 0 {
+				fmt.Printf("总共修正了 %v 个标题\n", count)
+			}
 			if internal {
 				tmp.SolutionPath = fmt.Sprintf("[Go]({{< relref \"/ChapterFour/%v/%v.md\" >}})", util.GetChpaterFourFileNum(int(row.FrontendQuestionID)), fmt.Sprintf("%04d.%v", int(row.FrontendQuestionID), s7))
 			} else {

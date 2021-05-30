@@ -5,6 +5,43 @@ import (
 	"strconv"
 )
 
+// 解法一
+func readBinaryWatch(num int) []string {
+	memo := make([]int, 60)
+	// count the number of 1 in a binary number
+	count := func(n int) int {
+		if memo[n] != 0 {
+			return memo[n]
+		}
+		originN, res := n, 0
+		for n != 0 {
+			n = n & (n - 1)
+			res++
+		}
+		memo[originN] = res
+		return res
+	}
+	// fmtMinute format minute 0:1 -> 0:01
+	fmtMinute := func(m int) string {
+		if m < 10 {
+			return "0" + strconv.Itoa(m)
+		}
+		return strconv.Itoa(m)
+	}
+
+	var res []string
+	// traverse 0:00 -> 12:00
+	for i := 0; i < 12; i++ {
+		for j := 0; j < 60; j++ {
+			if count(i)+count(j) == num {
+				res = append(res, strconv.Itoa(i)+":"+fmtMinute(j))
+			}
+		}
+	}
+	return res
+}
+
+// 解法二 打表
 var (
 	hour    = []string{"1", "2", "4", "8"}
 	minute  = []string{"01", "02", "04", "08", "16", "32"}
@@ -24,11 +61,11 @@ var (
 	}
 )
 
-func readBinaryWatch(num int) []string {
+func readBinaryWatch1(num int) []string {
+	var res []string
 	if num > 8 {
-		return []string{}
+		return res
 	}
-	res := []string{}
 	for i := 0; i <= num; i++ {
 		for j := 0; j < len(hourMap[i]); j++ {
 			for k := 0; k < len(minuteMap[num-i]); k++ {

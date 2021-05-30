@@ -80,7 +80,7 @@ disablePathToLower = true
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
   # You can also specify this parameter per page in front matter.
-  BookToC = false
+  BookToC = true
 
   # (Optional, default none) Set the path to a logo for the book. If the logo is
   # /static/logo.png then the path would be logo.png
@@ -98,10 +98,17 @@ disablePathToLower = true
   # Used for 'Last Modified' and 'Edit this page' links.
   BookRepo = 'https://github.com/halfrost/LeetCode-Go'
 
+  # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
+  # type.
+  # Required if 'BookRepo' param is set.
+  # Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
+  # Github uses 'commit', Bitbucket uses 'commits'
+  BookCommitPath = 'commit'
+
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to 'content' directory of repo.
-  BookEditPath = 'tree/master/website/content'
+  BookEditPath = 'tree/master/website/'
 
   # Configure the date format used on the pages
   # - In git information
@@ -147,5 +154,5 @@ disablePathToLower = true
     pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
     createIssueManually= true # If it is 'false', it is auto to make a Github issue when the administrators login.
     distractionFreeMode= true # Enable hot key (cmd|ctrl + enter) submit comment.
-
+    proxy= "https://shielded-brushlands-08810.herokuapp.com/https://github.com/login/oauth/access_token"
 
